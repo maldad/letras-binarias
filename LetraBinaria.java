@@ -1,15 +1,22 @@
+import javax.swing.JOptionPane;
+
 public class LetraBinaria{
 
-    String cadena = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    String cadena;
     int ascii;
     String binario;
+
+    public LetraBinaria(){
+    	cadena = JOptionPane.showInputDialog(null, "enter string...");
+    }//constructor
 
     public void conversor(){
     	
     	for(int i = 0; i < cadena.length(); i++){
     		ascii = cadena.charAt(i);
     		binario = Integer.toBinaryString(ascii);
-    		System.out.println(ascii + " = " + binario);
+    		//System.out.println(cadena.charAt(i) + " " + ascii + " = " + binario);
+    		System.out.println(binario);
     	}
     	
     }//conversor
